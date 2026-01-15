@@ -1,0 +1,37 @@
+# Set default behavior to automatically normalize line endings
+* text=auto
+
+# Source code files - always LF
+*.cpp text eol=lf
+*.h text eol=lf
+*.hpp text eol=lf
+*.c text eol=lf
+
+# Config files - always LF
+*.cmake text eol=lf
+CMakeLists.txt text eol=lf
+*.json text eol=lf
+*.yml text eol=lf
+*.yaml text eol=lf
+
+# Documentation - always LF
+*.md text eol=lf
+LICENSE text eol=lf
+.gitignore text eol=lf
+.gitattributes text eol=lf
+.gitmessage text eol=lf
+
+# Windows-specific files - always CRLF
+*.bat text eol=crlf
+*.cmd text eol=crlf
+*.ps1 text eol=crlf
+
+# Binary files - no conversion
+*.exe binary
+*.dll binary
+*.so binary
+*.a binary
+*.lib binary
+*.png binary
+*.jpg binary
+*.gif binary

@@ -1,0 +1,12 @@
+# <type>: <subject>
+#
+# Types:
+#   feat     - New feature
+#   fix      - Bug fix
+#   docs     - Documentation
+#   style    - Formatting (no code change)
+#   refactor - Code refactoring
+#   test     - Adding tests
+#   chore    - Maintenance
+#
+# Example: feat: add two sum solution
