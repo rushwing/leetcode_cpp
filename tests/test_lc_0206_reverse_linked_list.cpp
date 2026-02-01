@@ -1,6 +1,10 @@
 #include <gtest/gtest.h>
-#include "0206_reverse_linked_list.h"
+#include "solutions/lc_0206_reverse_linked_list_1.h"
+#include "common/list_node.h"
 #include <vector>
+
+using namespace leetcode;
+using common::ListNode;
 
 class ReverseLinkedListTest : public ::testing::Test {
 protected:

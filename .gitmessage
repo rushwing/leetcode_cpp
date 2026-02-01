@@ -1,12 +1,94 @@
-# <type>: <subject>
+# <type>(<scope>): <subject>
 #
+# <WHY>
+# - Why this change is necessary
+# - What problem it solves
+#
+# <WHAT>
+# - What was changed
+# - Key implementation details
+#
+# <TEST>
+# - How it was tested
+# - Test results
+#
+# Co-Authored-By: Claude Sonnet 4.5 <noreply@anthropic.com>
+
+# ──────────────────────────────────────────────────────────────────────────────
 # Types:
-#   feat     - New feature
-#   fix      - Bug fix
-#   docs     - Documentation
-#   style    - Formatting (no code change)
-#   refactor - Code refactoring
-#   test     - Adding tests
-#   chore    - Maintenance
+#   feat      - New feature (new solution, new common structure)
+#   fix       - Bug fix
+#   refactor  - Code restructuring without behavior change
+#   test      - Adding or updating tests
+#   docs      - Documentation updates
+#   build     - Build system changes
+#   chore     - Maintenance tasks
 #
-# Example: feat: add two sum solution
+# Scopes:
+#   solutions  - LeetCode solutions
+#   practice   - Practice problems
+#   common     - Common data structures
+#   tests      - Test files
+#   build      - Build configuration
+#   docs       - Documentation files
+#
+# ──────────────────────────────────────────────────────────────────────────────
+# Examples:
+#
+# feat(solutions): add solution for LC 42 Trapping Rain Water
+#
+# <WHY>
+# - Solve trapping rain water problem
+# - Practice two-pointer technique
+#
+# <WHAT>
+# - Created lc_0042_trapping_rain_water_1.h
+# - Implemented two-pointer approach
+# - Added comprehensive documentation with Tags, Complexity, Pitfalls
+#
+# <TEST>
+# - Created test_lc_0042_trapping_rain_water.cpp
+# - All 8 test cases passing
+# - ctest: 46/46 tests passed
+#
+# Co-Authored-By: Claude Sonnet 4.5 <noreply@anthropic.com>
+#
+# ──────────────────────────────────────────────────────────────────────────────
+#
+# feat(common): add GraphNode data structure
+#
+# <WHY>
+# - Multiple graph problems need this structure
+# - Extract to avoid duplication across solutions
+#
+# <WHAT>
+# - Created common/graph_node.h
+# - Used namespace leetcode::common
+# - Added documentation
+#
+# <TEST>
+# - Verified compilation
+# - Used in LC 133 Clone Graph solution
+#
+# Co-Authored-By: Claude Sonnet 4.5 <noreply@anthropic.com>
+#
+# ──────────────────────────────────────────────────────────────────────────────
+#
+# fix(solutions): correct edge case in LC 206 Reverse Linked List
+#
+# <WHY>
+# - Solution failed for single-node lists
+# - Didn't handle nullptr properly
+#
+# <WHAT>
+# - Added nullptr check before reversal loop
+# - Updated documentation Pitfalls section
+#
+# <TEST>
+# - All existing tests passing
+# - Added test case for single node
+# - ctest: 47/47 tests passed
+#
+# Co-Authored-By: Claude Sonnet 4.5 <noreply@anthropic.com>
+#
+# ──────────────────────────────────────────────────────────────────────────────

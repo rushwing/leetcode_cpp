@@ -1,5 +1,7 @@
 #include <gtest/gtest.h>
-#include "0056_merge_intervals.h"
+#include "solutions/lc_0056_merge_intervals_1.h"
+
+using namespace leetcode;
 
 class MergeIntervalsTest : public ::testing::Test {
 protected:

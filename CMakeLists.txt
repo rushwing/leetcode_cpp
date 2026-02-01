@@ -5,7 +5,12 @@ set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 # Include directories
-include_directories(${CMAKE_SOURCE_DIR}/include)
+include_directories(
+    ${CMAKE_SOURCE_DIR}
+    ${CMAKE_SOURCE_DIR}/solutions
+    ${CMAKE_SOURCE_DIR}/practice
+    ${CMAKE_SOURCE_DIR}/common
+)
 
 # Fetch GoogleTest
 include(FetchContent)

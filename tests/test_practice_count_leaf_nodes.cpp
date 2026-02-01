@@ -1,5 +1,9 @@
 #include <gtest/gtest.h>
-#include "count_leaf_nodes.h"
+#include "practice/count_leaf_nodes_1.h"
+#include "common/tree_node.h"
+
+using namespace leetcode::practice;
+using leetcode::common::TreeNode;
 
 class CountLeafNodesTest : public ::testing::Test {
 protected:

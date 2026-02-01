@@ -1,5 +1,7 @@
 #include <gtest/gtest.h>
-#include "0283_move_zeroes.h"
+#include "solutions/lc_0283_move_zeroes_1.h"
+
+using namespace leetcode;
 
 class MoveZeroesTest : public ::testing::Test {
 protected:

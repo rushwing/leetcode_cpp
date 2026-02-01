@@ -1,6 +1,8 @@
 #include <gtest/gtest.h>
 #include <algorithm>
-#include "0001_two_sum.h"
+#include "solutions/lc_0001_two_sum_1.h"
+
+using namespace leetcode;
 
 class TwoSumTest : public ::testing::Test {
 protected:
