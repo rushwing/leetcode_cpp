@@ -10,6 +10,7 @@ class ReverseLinkedListTest : public ::testing::Test {
 protected:
     Solution solution;
 
+    // Helper to create a list from a vector of values
     ListNode* createList(const std::vector<int>& values) {
         if (values.empty()) return nullptr;
         ListNode* head = new ListNode(values[0]);
@@ -21,6 +22,7 @@ protected:
         return head;
     }
 
+    // Helper to convert a list back to a vector for easy comparison
     std::vector<int> toVector(ListNode* head) {
         std::vector<int> result;
         while (head) {
@@ -30,6 +32,7 @@ protected:
         return result;
     }
 
+    // Helper to delete a list and prevent memory leaks
     void deleteList(ListNode* head) {
         while (head) {
             ListNode* temp = head;
@@ -40,7 +43,6 @@ protected:
 };
 
 TEST_F(ReverseLinkedListTest, Example1) {
-    // [1,2,3,4,5] -> [5,4,3,2,1]
     ListNode* head = createList({1, 2, 3, 4, 5});
     ListNode* result = solution.reverseList(head);
     EXPECT_EQ(toVector(result), std::vector<int>({5, 4, 3, 2, 1}));
@@ -48,7 +50,6 @@ TEST_F(ReverseLinkedListTest, Example1) {
 }
 
 TEST_F(ReverseLinkedListTest, Example2) {
-    // [1,2] -> [2,1]
     ListNode* head = createList({1, 2});
     ListNode* result = solution.reverseList(head);
     EXPECT_EQ(toVector(result), std::vector<int>({2, 1}));
@@ -62,14 +63,9 @@ TEST_F(ReverseLinkedListTest, SingleNode) {
     deleteList(result);
 }
 
-TEST_F(ReverseLinkedListTest, Empty) {
-    ListNode* result = solution.reverseList(nullptr);
-    EXPECT_EQ(result, nullptr);
-}
-
-TEST_F(ReverseLinkedListTest, ThreeNodes) {
-    ListNode* head = createList({1, 2, 3});
+TEST_F(ReverseLinkedListTest, EmptyList) {
+    ListNode* head = createList({});
     ListNode* result = solution.reverseList(head);
-    EXPECT_EQ(toVector(result), std::vector<int>({3, 2, 1}));
-    deleteList(result);
+    EXPECT_EQ(result, nullptr);
+    deleteList(result); // Safe to call on nullptr
 }

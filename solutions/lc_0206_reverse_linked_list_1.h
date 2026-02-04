@@ -4,29 +4,35 @@
 // Tags: Linked List, Recursion
 //
 // Problem:
-//     Given the head of a singly linked list, reverse the list, and return the
-//     reversed list.
+//     Given the head of a singly linked list, reverse the list, and return the reversed list.
+//
+//     Example 1:
+//     Input: head = [1,2,3,4,5]
+//     Output: [5,4,3,2,1]
+//
+//     Example 2:
+//     Input: head = [1,2]
+//     Output: [2,1]
+//
+//     Example 3:
+//     Input: head = []
+//     Output: []
+//
+//     Constraints:
+//     - The number of nodes in the list is in the range [0, 5000].
+//     - -5000 <= Node.val <= 5000
 //
 // Solution:
-//     - Iterative approach using three pointers: prev, current, next
-//     - Start with prev = nullptr, current = head
-//     - For each node:
-//         1. Save next node
-//         2. Reverse current's pointer to point to prev
-//         3. Move prev and current one step forward
-//     - Return prev (new head) when current becomes nullptr
+//     - [To be implemented]
 //
-// Time Complexity: O(n)
-//     - Single pass through the list
+// Time Complexity: O(?)
+//     - [To be analyzed]
 //
-// Space Complexity: O(1)
-//     - Only using constant extra space for pointers
+// Space Complexity: O(?)
+//     - [To be analyzed]
 //
 // Pitfalls:
-//     - Don't lose reference to the next node before reversing the pointer
-//     - Handle empty list (head == nullptr)
-//     - Return prev, not current (current will be nullptr at the end)
-//     - Alternative recursive solution uses O(n) call stack space
+//     - [To be identified]
 
 #pragma once
 
@@ -40,12 +46,13 @@ class Solution {
 public:
     ListNode* reverseList(ListNode* head) {
         ListNode* prev = nullptr;
-        ListNode* current = head;
-        while (current != nullptr) {
-            ListNode* next = current->next;
-            current->next = prev;
-            prev = current;
-            current = next;
+        ListNode* curr = head;
+
+        while (curr != nullptr) {
+            ListNode* temp = curr->next;
+            curr->next = prev;
+            prev = curr;
+            curr = temp;
         }
         return prev;
     }
