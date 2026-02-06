@@ -18,3 +18,6 @@ CMakeFiles/
 CMakeCache.txt
 cmake_install.cmake
 Makefile
+
+# Claude-MiniMax launch script
+minimax_claude_launch.sh
