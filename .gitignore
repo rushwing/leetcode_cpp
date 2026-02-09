@@ -4,7 +4,8 @@ cmake-build-*/
 
 # IDE
 .idea/
-.vscode/
+# .vscode/  # Keep for version control (debug configurations)
+.vscode/settings.json
 *.swp
 *.swo
 
